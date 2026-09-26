@@ -38,16 +38,18 @@ redes-neuronales-ii/
 
 ## Contenido
 
-### Notebook 1 — Backpropagation, activaciones y clasificación binaria
+### Notebook 1 — Perceptrón, red de una capa, MLP y clasificación binaria
 
 | Sección | Descripción |
 |---|---|
 | 1 | Funciones de activación Sigmoide y ReLU, y sus derivadas |
 | 2 | Dataset sintético de dos semilunas (no linealmente separable), generado con NumPy |
-| 3 | MLP "vainilla" desde cero con backpropagation, comparando Sigmoide vs. ReLU en la capa oculta |
-| 4 | La misma arquitectura implementada con TensorFlow + Keras |
-| 5 | La misma arquitectura implementada con PyTorch |
-| 6-7 | Comparación de resultados y conclusiones |
+| 3 | Perceptrón simple rediseñado, puesto a prueba sobre el dataset de semilunas |
+| 4 | Red neuronal de una capa rediseñada (Sigmoide vs. ReLU) |
+| 5 | MLP "vainilla" desde cero con backpropagation, comparando Sigmoide vs. ReLU en la capa oculta |
+| 6 | La misma arquitectura de MLP implementada con TensorFlow + Keras |
+| 7 | La misma arquitectura de MLP implementada con PyTorch |
+| 8-9 | Comparación de resultados (7 implementaciones) y conclusiones |
 
 ### Notebook 2 — Clasificación multiclase con MNIST
 
@@ -62,7 +64,8 @@ Ninguno de los dos notebooks utiliza capas convolucionales (CNN), conforme al al
 
 ## Modelos y técnicas implementadas
 
-- **Perceptrón, red de una capa y red multicapa**: base heredada de la entrega anterior, ahora extendida con ReLU y clasificación binaria sobre datos no lineales.
+- **Perceptrón y red de una capa**: rediseñados a partir de la entrega anterior y puestos a prueba sobre el dataset de semilunas, evidenciando su límite como clasificadores lineales.
+- **Red multicapa (MLP)**: con capa oculta configurable (Sigmoide o ReLU), entrenada con backpropagation completo.
 - **Backpropagation**: implementado manualmente con NumPy (regla de la cadena, gradientes por capa) y de forma automática (autograd) en Keras y PyTorch.
 - **Funciones de activación**: Sigmoide, ReLU y Softmax (para la capa de salida multiclase).
 - **Clasificación binaria**: MLP con salida sigmoide + pérdida binary cross-entropy, sobre un dataset de dos semilunas.
@@ -78,16 +81,17 @@ Ninguno de los dos notebooks utiliza capas convolucionales (CNN), conforme al al
 ## Requisitos cumplidos
 
 - [x] Desarrollo individual en Google Colab.
+- [x] Código fuente de perceptrón, red de una capa y red multicapa.
 - [x] Backpropagation implementado y explicado.
 - [x] Funciones de activación Sigmoide y ReLU aplicadas y comparadas.
-- [x] Clasificación binaria (MLP desde cero + Keras + PyTorch).
+- [x] Clasificación binaria (perceptrón, red de una capa, MLP, Keras y PyTorch).
 - [x] Clasificación multiclase con TensorFlow + Keras (MNIST, sin CNN).
 - [x] Clasificación multiclase con PyTorch (MNIST, sin CNN).
 - [x] Resultados y evidencias de ejecución incluidos en los notebooks.
 - [x] Código fuente funcional, comentado y documentado.
 - [x] Notebooks ejecutados de extremo a extremo sin errores.
 - [x] Publicado en repositorio GitHub con enlace funcional.
-- [x] Documento técnico en PDF con código, explicaciones, resultados y enlace al repositorio.
+- [x] Documento técnico en PDF con código, explicaciones y resultados.
 
 ## Autor
 
